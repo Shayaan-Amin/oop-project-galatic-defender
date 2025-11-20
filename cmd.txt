@@ -1,0 +1,2 @@
+compile: g++ src/*.cpp main.cpp -Iinclude -lsfml-graphics -lsfml-window -lsfml-system -o GalacticDefender.exe
+run: ./GalacticDefender.exe
