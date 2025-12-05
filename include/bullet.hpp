@@ -3,10 +3,11 @@
 
 #include "entity.hpp"
 
-// Bullet moves upwards (player bullets). Very simple class.
+// Bullet moves upwards player bullets
 class Bullet : public Entity {
 public:
     float speed = 350.f; // pixels per second (upwards)
+    // bullet state activeor not
     bool active = true;  // set to false when it should be removed
 
     Bullet() = default;

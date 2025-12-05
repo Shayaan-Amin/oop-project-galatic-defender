@@ -3,6 +3,7 @@
 
 Player::Player(const sf::Texture &tx, const sf::Vector2f &pos) {
     sprite.setTexture(tx);
+    sprite.setOrigin(0.f,0.f);
     position = pos;
     speed = 320.f;
     health = 1;

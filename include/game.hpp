@@ -22,7 +22,10 @@ private:
     void handleInput(float dt);
     void spawnNextWave();
     void checkBulletEnemyCollisions();
+    void checkPlayerEnemyCollisions();  // check if player collides with enemies
     void checkPowerUpCollection();
+    void activateNukePowerUp();    // activate nuke when SPACE pressed
+    void activateSlowPowerUp();    // activate slow when R pressed
     void reset();     // restart game after losing
 
     // Window and textures/sprites
@@ -42,8 +45,9 @@ private:
     int initialLives;
     sf::Font font;
 
-    // Slow power-up timer (Game handles restore)
-    float slowRestoreTime;
+    // Power-up activation cooldown (to prevent rapid activation)
+    sf::Clock powerUpCooldown;
+    float powerUpCooldownTime = 0.3f; // seconds between activations
 };
 
 #endif // GAME_HPP

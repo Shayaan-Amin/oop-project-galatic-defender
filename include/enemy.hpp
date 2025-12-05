@@ -6,7 +6,7 @@
 // Enemy descends downward. Simple autonomous behavior.
 class Enemy : public Ship {
 public:
-    float velocity = 60.f; // downward px/sec
+    float velocity = 100.f; // downward px/sec
     bool active = true;
 
     Enemy() = default;
